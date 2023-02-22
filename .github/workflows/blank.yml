@@ -1,0 +1,25 @@
+# _config.yml
+
+title: Min Enkle Nettside
+description: Dette er en nettside jeg har laget med Jekyll.
+
+theme: minima
+
+permalink: /:title/
+
+author:
+  name: Ditt Navn
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      header: true
+      footer: true
+
+# End of file

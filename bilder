@@ -1,0 +1,32 @@
+# _config.yml
+
+title: Min Bildedelingside
+description: Del bilder og historier med dine venner.
+
+theme: jekyll-theme-minimal
+
+author:
+  name: Ditt Navn
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Ditt Navn"
+      share-buttons: true
+      comments: true
+      categories: "Bilder"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      header: true
+      footer: true
+
+# End of file

@@ -1,20 +1,31 @@
-# github.io
-Test
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Min Enkle Nettside</title>
-  </head>
-  <body>
-    <h1>Velkommen til Min Enkle Nettside!</h1>
-    <p>Dette er en nettside jeg har laget med HTML-kode.</p>
-    <h2>Om Meg</h2>
-    <p>Jeg er en hobbyprogrammerer som liker å lære om webutvikling.</p>
-    <h2>Mine Interesser</h2>
-    <ul>
-      <li>Programmering</li>
-      <li>Matlaging</li>
-      <li>Trening</li>
-    </ul>
-  </body>
+<head>
+	<title>Min bildedelingsside</title>
+</head>
+<body>
+
+	<h1>Velkommen til min bildedelingsside!</h1>
+	
+	<p>På denne siden kan du laste opp og dele bilder med venner og familie.</p>
+	
+	<form action="upload.php" method="POST" enctype="multipart/form-data">
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<input type="submit" value="Last opp bilde" name="submit">
+	</form>
+
+	<div>
+		<h2>Dine opplastede bilder:</h2>
+		<?php
+			$dir = "uploads/";
+			$files = scandir($dir);
+			foreach($files as $file) {
+				if($file !== '.' && $file !== '..') {
+					echo '<img src="' . $dir . $file . '" width="300px" height="300px">';
+				}
+			}
+		?>
+	</div>
+
+</body>
 </html>
